@@ -26,9 +26,10 @@
 
         <!--avater-->
         <ImageView
+            android:scaleType="centerInside"
             android:id="@+id/imageViewAvatar"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/avatar" />
         <!--name-->
