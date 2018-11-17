@@ -29,6 +29,7 @@ public class RegisterFragment extends Fragment {
     private ImageView imageView;
     private Uri uri;
     private String tag = "17Nov";
+    private MyAlert myAlert ;
 
     public RegisterFragment() {
         // Required empty public constructor
@@ -37,6 +38,8 @@ public class RegisterFragment extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        myAlert = new MyAlert(getActivity());
 
 //      Create Toolbar
         createToolbar();
