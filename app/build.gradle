@@ -5,7 +5,7 @@ android {
     defaultConfig {
         applicationId "tom.pongzai.com.testaccount"
         minSdkVersion 15
-        targetSdkVersion 28
+        targetSdkVersion 22   // old  28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
