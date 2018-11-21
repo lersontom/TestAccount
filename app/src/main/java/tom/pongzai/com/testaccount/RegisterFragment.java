@@ -16,6 +16,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 
@@ -96,6 +97,34 @@ public class RegisterFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == R.id.itemUpload) {
+            EditText editTextName = getView().findViewById(R.id.editTextName);
+            EditText editTextEmail = getView().findViewById(R.id.editTextEmail);
+            EditText editTextPassword = getView().findViewById(R.id.editTextPassword);
+
+
+            String name = editTextName.getText().toString().trim();
+            String email = editTextEmail.getText().toString().trim();
+            String password = editTextPassword.getText().toString();
+
+            myAlert = new MyAlert(getActivity());
+            if(name.equals("")) {
+                myAlert.normalDialog("Hey", "Please Check You Name");
+                editTextName.requestFocus();
+
+            }else if(email.equals("")) {
+                myAlert.normalDialog("Hey", "Please Check You Email");
+                editTextEmail.requestFocus();
+
+            }else if(password.equals("") ) {
+                myAlert.normalDialog("Hey", "Please Check You password");
+                editTextPassword.requestFocus();
+
+            }else if( password.length() < 4) {
+                myAlert.normalDialog("Hey", "Please Check You password upper 4 charecters");
+                editTextPassword.selectAll();
+                editTextPassword.requestFocus();
+            }
+
             return true;
         }
 

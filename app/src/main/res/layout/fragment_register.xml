@@ -34,7 +34,7 @@
             android:src="@drawable/avatar" />
         <!--name-->
         <EditText
-            android:id="@+id/editTectName"
+            android:id="@+id/editTextName"
             android:hint="Name"
             android:inputType="text"
             android:layout_width="match_parent"
