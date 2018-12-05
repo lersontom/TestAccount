@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.Toolbar;
@@ -19,6 +20,14 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.Map;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -31,7 +40,7 @@ public class RegisterFragment extends Fragment {
     private Uri uri;
     private String tag = "17Nov";
     private MyAlert myAlert ;
-
+    private DatabaseReference databaseReference;
     public RegisterFragment() {
         // Required empty public constructor
     }
@@ -46,6 +55,8 @@ public class RegisterFragment extends Fragment {
         createToolbar();
 //      avatar Controller
         avatarController();
+
+
 
 
 
