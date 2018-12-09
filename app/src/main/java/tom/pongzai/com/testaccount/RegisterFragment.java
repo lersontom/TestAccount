@@ -133,7 +133,7 @@ public class RegisterFragment extends Fragment {
         } else if (nameString.isEmpty() || emailString.isEmpty() || passwordString.isEmpty()) {
             myAlert.normalDialog(getString(R.string.title_have_space), getString(R.string.message_have_space));
         } else {
-            
+
         }
 
     }

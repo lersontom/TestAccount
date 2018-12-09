@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "594118869351",
-    "firebase_url": "https://testaccountdatabase.firebaseio.com",
-    "project_id": "testaccountdatabase",
-    "storage_bucket": "testaccountdatabase.appspot.com"
+    "project_number": "529361111239",
+    "firebase_url": "https://testaccount-e685d.firebaseio.com",
+    "project_id": "testaccount-e685d",
+    "storage_bucket": "testaccount-e685d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:594118869351:android:b449ad884c3026ec",
+        "mobilesdk_app_id": "1:529361111239:android:b449ad884c3026ec",
         "android_client_info": {
           "package_name": "tom.pongzai.com.testaccount"
         }
       },
       "oauth_client": [
         {
-          "client_id": "594118869351-bdqf39fuloiomenk2ve0t10inrq5bihj.apps.googleusercontent.com",
+          "client_id": "529361111239-dv21rrl9eg416t4g5ivqb8dhuod7omo7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tom.pongzai.com.testaccount",
+            "certificate_hash": "e1c8026c1bb3b89168d192c8a8b500ec65bbdccb"
+          }
+        },
+        {
+          "client_id": "529361111239-pvvogpjdm66014m7hgbtefcenhaek7ag.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCEgKm1rWA-Ag8YEZeld1QOlQ49HmzG1a4"
+          "current_key": "AIzaSyAeBDb8BiPUb7GEEHGn6oKakilHSqOnSug"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "529361111239-pvvogpjdm66014m7hgbtefcenhaek7ag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
