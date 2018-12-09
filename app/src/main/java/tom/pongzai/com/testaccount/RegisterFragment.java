@@ -34,13 +34,14 @@ import java.util.Map;
  */
 public class RegisterFragment extends Fragment {
 
-//    Explicit
+    //    Explicit
     private boolean avartaABoolean = true;
     private ImageView imageView;
     private Uri uri;
     private String tag = "17Nov";
-    private MyAlert myAlert ;
+    private MyAlert myAlert;
     private DatabaseReference databaseReference;
+
     public RegisterFragment() {
         // Required empty public constructor
     }
@@ -55,9 +56,6 @@ public class RegisterFragment extends Fragment {
         createToolbar();
 //      avatar Controller
         avatarController();
-
-
-
 
 
     }// main method
@@ -100,7 +98,6 @@ public class RegisterFragment extends Fragment {
         inflater.inflate(R.menu.menu_register, menu);
 
 
-
     }
 
 
@@ -108,33 +105,9 @@ public class RegisterFragment extends Fragment {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         if (item.getItemId() == R.id.itemUpload) {
-            EditText editTextName = getView().findViewById(R.id.editTextName);
-            EditText editTextEmail = getView().findViewById(R.id.editTextEmail);
-            EditText editTextPassword = getView().findViewById(R.id.editTextPassword);
 
+            checkDataAndUpload();
 
-            String name = editTextName.getText().toString().trim();
-            String email = editTextEmail.getText().toString().trim();
-            String password = editTextPassword.getText().toString();
-
-            myAlert = new MyAlert(getActivity());
-            if(name.equals("")) {
-                myAlert.normalDialog("Hey", "Please Check You Name");
-                editTextName.requestFocus();
-
-            }else if(email.equals("")) {
-                myAlert.normalDialog("Hey", "Please Check You Email");
-                editTextEmail.requestFocus();
-
-            }else if(password.equals("") ) {
-                myAlert.normalDialog("Hey", "Please Check You password");
-                editTextPassword.requestFocus();
-
-            }else if( password.length() < 4) {
-                myAlert.normalDialog("Hey", "Please Check You password upper 4 charecters");
-                editTextPassword.selectAll();
-                editTextPassword.requestFocus();
-            }
 
             return true;
         }
@@ -142,9 +115,32 @@ public class RegisterFragment extends Fragment {
         return super.onOptionsItemSelected(item);
     }
 
+    private void checkDataAndUpload() {
+        myAlert = new MyAlert(getActivity());
+
+        // get value from
+        EditText editTextName = getView().findViewById(R.id.editTextName);
+        EditText editTextEmail = getView().findViewById(R.id.editTextEmail);
+        EditText editTextPassword = getView().findViewById(R.id.editTextPassword);
+
+        String nameString = editTextName.getText().toString().trim();
+        String emailString = editTextEmail.getText().toString().trim();
+        String passwordString = editTextPassword.getText().toString();
+
+
+        if (avartaABoolean) {
+            myAlert.normalDialog("Non Choose Image", "Please Choose Image");
+        } else if (nameString.isEmpty() || emailString.isEmpty() || passwordString.isEmpty()) {
+            myAlert.normalDialog(getString(R.string.title_have_space), getString(R.string.message_have_space));
+        } else {
+            
+        }
+
+    }
+
     private void createToolbar() {
-        Toolbar toolbar  = getView().findViewById(R.id.toolsbarRegister);
-        ((MainActivity)getActivity()).setSupportActionBar(toolbar);
+        Toolbar toolbar = getView().findViewById(R.id.toolsbarRegister);
+        ((MainActivity) getActivity()).setSupportActionBar(toolbar);
         ((MainActivity) getActivity()).getSupportActionBar().setTitle("Register");
         ((MainActivity) getActivity()).getSupportActionBar().setSubtitle("Please .......");
 //        navigater icon
