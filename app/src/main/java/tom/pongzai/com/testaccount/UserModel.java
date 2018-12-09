@@ -1,5 +1,6 @@
 package tom.pongzai.com.testaccount;
 
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -17,6 +18,7 @@ import android.os.Parcelable;
         this.umessageString = umessageString;
         this.unameString = unameString;
     }
+
 
     protected UserModel(Parcel in) {
         uavatarString = in.readString();
@@ -82,3 +84,5 @@ import android.os.Parcelable;
         dest.writeString(unameString);
     }
 }
+
+
